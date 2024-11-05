@@ -9,6 +9,7 @@ const About = () => {
   return (
     <>
       <Headers />
+      <div className="container"></div>
       <div className="container mt-4">
         <div className="row">
           <div className="col-md-12 mt-5">

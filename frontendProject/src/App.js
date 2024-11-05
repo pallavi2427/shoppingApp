@@ -10,11 +10,9 @@ import Register from "./pages/Register";
 import CartPage from "./pages/CartPage";
 import BuyNow from "./pages/BuyNow";
 import SingleProduct from "./pages/SingleProduct";
-import Footer from "./pages/Footer";
 function App() {
   return (
     <>
-    
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -27,7 +25,6 @@ function App() {
           <Route path="/cart" element={<CartPage />}></Route>
           <Route path="/buy" element={<BuyNow />}></Route>
           <Route path="/product/:id" element={<SingleProduct />}></Route>
-          <Route path="/slider" element={<Footer/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
