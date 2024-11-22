@@ -30,7 +30,7 @@
 .detail-box {
   width: 80%;
   margin-left: 100px;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 .carousel-indicators li {
   list-style-type: none;
@@ -164,12 +164,12 @@ textarea.form-control-shadow {
 hr.heading-center {
   width: 5%;
   height: 3px;
-  border: 2px solid #ff424d;
+  border: 2px solid #d9a129;
   border-radius: 5px;
   margin: 0 auto;
 }
 .producthead {
-  color: #ff424d;
+  color: #d9a129;
 }
 
 .shell {
@@ -282,6 +282,17 @@ hr.heading-center {
   background-color: #232334;
   color: #fff;
 }
+/* Add hover effect for the icon */
+.icon-hover {
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth animation */
+  color: #fff;
+}
+
+.icon-hover:hover {
+  transform: scale(1.6); /* Scale up the icon on hover */
+  color: #d9a129; /* Optional: change the color on hover */
+}
+
 .freeShip {
   font-size: 9px;
   position: absolute;
@@ -399,6 +410,8 @@ ul {
 .footer-section {
   position: relative;
   top: 37px;
+  padding: 50px 0; /* Padding around the footer content */
+  box-shadow: 0px -6px 15px rgba(0, 0, 0, 0.3);
 }
 .footer-cta {
   border-bottom: 1px solid #373636;
@@ -615,13 +628,14 @@ p small {
 .RotatingTriangles-wrapper {
   text-align: center;
 }
-.free-del {
-  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
-.free-del:hover {
+/* .free-del {
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect
+ } */
+
+/* .free-del:hover {
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2) !important;
   transform: translateY(-10px) !important;
-}
+} */
 .free-contact {
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2) !important;
   /* transform: translateY(-10px) !important; */
@@ -629,7 +643,40 @@ p small {
 
 /* slider */
 .slider-text {
-  color: #d9a129;
+  color: #fee19c;
+}
+.detail-box h1 {
+  font-family: "Arial", sans-serif;
+  color: #fee19c;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgb(192 176 176); /* Example shadow */
+}
+.detail-box p {
+  font-family: "Arial", sans-serif;
+  font-size: 18px; /* Slightly larger font for readability */
+  color: #e0e0e0; /* Light gray text for contrast */
+  line-height: 1.8; /* Spacing between lines */
+  margin: 15px 0; /* Spacing around the paragraph */
+  text-align: justify; /* Align text for clean edges */
+  text-shadow: 1px 1px 2px rgba(173, 230, 225, 0.452); /* Soft glow effect */
+}
+
+.sticky-sidebar {
+  position: sticky;
+  top: 100px; /* Adjust spacing from the top of the viewport */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+.sticky-order {
+  position: sticky;
+  bottom: 20px; /* Keeps the button 20px above the bottom of the viewport */
+  z-index: 1000; /* Ensure it stays above other elements */
+  background-color: white; /* Set a background to prevent overlapping issues */
+  padding: 10px; /* Add some padding for spacing */
+  border-top: 1px solid #ddd; /* Optional: Add a border to separate it visually */
 }
 
 /* slider */
+.cartImg img {
+  height: auto;
+  width: 30%;
+}

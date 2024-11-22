@@ -9,11 +9,12 @@ const About = () => {
   return (
     <>
       <Headers />
-      <div className="container"></div>
-      <div className="container mt-4">
+      <div className="container mt-5">
         <div className="row">
           <div className="col-md-12 mt-5">
-            <h1 className="text-center">Why Shop With Us</h1>
+            <h1 className="text-center">
+              Why Shop <span className="producthead">With Us</span>
+            </h1>
             <hr className="heading-center"></hr>
           </div>
         </div>
@@ -28,11 +29,11 @@ const About = () => {
             <div className="card mb-4 rounded-3 shadow-sm free-del">
               <div className="card-body cardDesign">
                 <h1 className="card-title pricing-card-title">
-                  <TbTruckDelivery className="text-white" />
+                  <TbTruckDelivery className="icon-hover" />
                 </h1>
                 <ul className="list-unstyled text-white mt-3 mb-4">
                   <li>
-                    <h5>Fast Delivery</h5>
+                    <h5 className="icon-hover">Fast Delivery</h5>
                   </li>
                   <li>variations of passages of Lorem Ipsum available</li>
                 </ul>
@@ -43,14 +44,14 @@ const About = () => {
             <div className="card mb-4 rounded-3 shadow-sm free-del">
               <div className="card-body cardDesign">
                 <h1 className="card-title pricing-card-title text-white">
-                  <span className="freeShip">
+                  <span className="freeShip icon-hover">
                     <u>Free</u>
                   </span>
-                  <FiTruck className="text-white" />
+                  <FiTruck className="icon-hover" />
                 </h1>
                 <ul className="list-unstyled text-white mt-3 mb-4">
                   <li>
-                    <h5>Free Shipping</h5>
+                    <h5 className="icon-hover">Free Shipping</h5>
                   </li>
                   <li>variations of passages of Lorem Ipsum available</li>
                 </ul>
@@ -61,11 +62,11 @@ const About = () => {
             <div className="card mb-4 rounded-3 shadow-sm free-del">
               <div className="card-body cardDesign">
                 <h1 className="card-title pricing-card-title">
-                  <FaHandHoldingHeart className="text-white" />
+                  <FaHandHoldingHeart className="icon-hover" />
                 </h1>
                 <ul className="list-unstyled text-white mt-3 mb-4">
                   <li>
-                    <h5>Best Quality</h5>
+                    <h5 className="icon-hover">Best Quality</h5>
                   </li>
                   <li>variations of passages of Lorem Ipsum available</li>
                 </ul>

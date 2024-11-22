@@ -41,9 +41,9 @@ const Contact = () => {
   return (
     <>
       <Headers />
-      <div className="container mt-4">
+      <div className="container mt-5">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-12 mt-5">  
             <h1 className="text-center">
               Contact <span className="producthead">Us</span>
             </h1>

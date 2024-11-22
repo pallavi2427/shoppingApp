@@ -98,6 +98,7 @@ const Products = () => {
           </div>
         </div>
       </div>
+      <hr></hr>
 
       <Footers />
     </>

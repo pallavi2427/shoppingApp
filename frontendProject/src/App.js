@@ -25,6 +25,7 @@ function App() {
           <Route path="/cart" element={<CartPage />}></Route>
           <Route path="/buy" element={<BuyNow />}></Route>
           <Route path="/product/:id" element={<SingleProduct />}></Route>
+          
         </Routes>
       </BrowserRouter>
     </>

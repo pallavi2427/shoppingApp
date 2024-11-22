@@ -50,9 +50,12 @@ const login = async (req, res) => {
             expiresIn: "24h",
           }
         );
-        return res
-          .status(200)
-          .json({ message: "Login Success", username, token ,contact:user.contact });
+        return res.status(200).json({
+          message: "Login Success",
+          username,
+          token,
+          contact: user.contact,
+        });
       }
     } catch (error) {
       return res.status(400).json({ message: "Failed" });
@@ -71,6 +74,22 @@ const getUser = async (req, res) => {
     }
   } catch (error) {
     res.status(400).json({ message: "Failed" });
+  }
+};
+
+const updateuser = async (req, res) => {
+  const id = req.params.id;
+  const user = await userSchema.updateOne({ _id: id });
+  try {
+    if (!user) {
+      res.status(400).json({message:"user does not exist"})
+    }
+    else{
+      res.status(200).json({message:"user updated successfully",user})
+
+    }
+  } catch (error) {
+    
   }
 };
 

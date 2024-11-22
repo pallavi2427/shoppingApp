@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Headers from "../component/Headers";
-import slider from "./../images/slider-bg.jpg";
+import slider from "./../images/optional2.jpg";
 import logo from "../images/logo1.png";
 import { FaTelegramPlane } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
@@ -14,7 +14,7 @@ const Home = () => {
     <>
       <Headers />
       <div className="slider_bg_box">
-        <img src={slider}></img>
+        <img src={slider} alt=""></img>
       </div>
       <div
         id="carouselExampleSlidesOnly"
@@ -22,7 +22,7 @@ const Home = () => {
         data-bs-ride="carousel"
       >
         <div className="carousel-inner">
-          <div className="carousel-item active" data-bs-interval="2000">
+          <div className="carousel-item active" data-bs-interval="4000">
             <div className="container">
               <div className="row">
                 <div className="col-md-6">
@@ -48,6 +48,7 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="detail-box">
                     <h1 className="slider-text">Sale 20% Off</h1>
+
                     <span>
                       <h1>On Everything</h1>
                     </span>
@@ -68,6 +69,7 @@ const Home = () => {
                 <div className="col-md-6">
                   <div className="detail-box">
                     <h1 className="slider-text">Sale 20% Off</h1>
+
                     <span>
                       <h1>On Everything</h1>
                     </span>
@@ -218,7 +220,7 @@ const Home = () => {
                         </div>
                         <div className="footer-text mb-25">
                           <p>
-                            Don’t miss to subscribe to our new feeds, kindly
+                            Don’t miss to subscribe to our new feeds, kindly ’
                             fill the form below.
                           </p>
                         </div>

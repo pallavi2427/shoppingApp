@@ -23,19 +23,28 @@ const BuyNow = () => {
     <>
       <Headers />
 
-      <div className="container" style={{ paddingTop: "80px" }}>
+      <div className="container" style={{ paddingTop: "95px" }}>
         <div className="row">
           <div className="col-md-8">
             <nav aria-label="breadcrumb">
-              <div className="bg-body-tertiary border rounded-3 p-2">
-                <h6>
-                  LOGIN
-                  <TiTick />
-                </h6>
-                <div className="d-inline">
-                  <h6 className="d-inline text-capitalize">{uName}</h6>
-                  <p className="d-inline mx-2">+91{contact}</p>
+              <div className="bg-body-tertiary border rounded-3 p-3 d-flex justify-content-between align-items-center">
+                {/* Left Section: Login and Contact */}
+                <div>
+                  <h6 className="d-flex align-items-center mb-1">
+                    LOGIN
+                    <TiTick className="ms-2" />
+                  </h6>
+                  <div>
+                    <span className="fw-bold text-capitalize">{uName}</span>
+                    <span className="mx-2">|</span>
+                    <span>+91 {contact}</span>
+                  </div>
                 </div>
+
+                {/* Right Section: Change Button */}
+                {/* <button className="btn btn-link text-decoration-none">
+                  Change
+                </button> */}
               </div>
             </nav>
 
@@ -123,7 +132,7 @@ const BuyNow = () => {
                       className="btn text-white"
                       style={{ backgroundColor: "#ff424d" }}
                     >
-                      Continue
+                      PLACE ORDER
                     </button>
                   </span>
                 </div>

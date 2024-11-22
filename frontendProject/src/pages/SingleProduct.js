@@ -10,6 +10,8 @@ const SingleProduct = () => {
   const token = localStorage.getItem("token");
   const { id } = useParams();
   const [product, setProduct] = useState("");
+  const [isInCart, setIsInCart] = useState(false); // New state variable
+
   const colors = ["pink", "blue", "green", "yellow", "black"];
   const [selectedColor, setSelectedColor] = useState(colors[0]);
 
@@ -20,14 +22,35 @@ const SingleProduct = () => {
       );
       const data = await response.json();
       setProduct(data);
+      checkIfInCart(data.id);
     } catch (error) {
       console.log(error);
     }
   };
+
+  const checkIfInCart = (productId) => {
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    setIsInCart(cartItems.some((item) => item.id === productId));
+  };
+
   useEffect(() => {
     singleProduct();
   }, [id]);
-{}
+
+  const handleAddToCart = () => {
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const productAlreadyInCart = cartItems.some((item) => item._id === product._id);
+  
+  if (productAlreadyInCart) {
+    alert("You already have this product in your cart");
+    return;
+  }
+
+    const updatedCartItems = [...cartItems, product];
+    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+    setIsInCart(true);
+  };
+
   return (
     <>
       <Headers />
@@ -49,7 +72,9 @@ const SingleProduct = () => {
                   <div className="col-md-6">
                     {" "}
                     <NavLink to="/login">
-                      <button className="cart-btn">Add to Cart</button>
+                      <button className="cart-btn" onClick={handleAddToCart}>
+                        Add to Cart
+                      </button>
                     </NavLink>
                   </div>
                   <div className="col-md-6">
@@ -63,10 +88,9 @@ const SingleProduct = () => {
                 <>
                   {" "}
                   <div className="col-md-6">
-                    {" "}
-                    <NavLink to="/cart">
-                      <button className="cart-btn">Add to Cart</button>
-                    </NavLink>
+                    <button className="cart-btn" onClick={handleAddToCart}>
+                      Add to Cart
+                    </button>
                   </div>
                   <div className="col-md-6">
                     {" "}
